@@ -12,6 +12,7 @@ import RxSwift
 
 class PizzaListViewController: UIViewController {
     @IBOutlet weak var pizzaTableView: UITableView!
+    
     var pizzas: [ReturnApiPizza] = []
     let disposeBag = DisposeBag()
     var apiConnection = ApiConnection()
@@ -28,12 +29,20 @@ class PizzaListViewController: UIViewController {
         apiConnection.fetchPizzas().subscribe(onNext: {observer in
             self.pizzas = observer
             self.pizzaTableView.reloadData()
+            
+        }, onError:  {error in
+            // Tratar erro aqui
+            // Alert aqui
         }).disposed(by: disposeBag)
     }
 }
 
 //MARK: - Extension
 extension PizzaListViewController: UITableViewDataSource, UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        130
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pizzas.count

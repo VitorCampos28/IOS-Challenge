@@ -13,19 +13,35 @@ class PizzaTableViewCell: UITableViewCell {
     @IBOutlet weak var pizzaImage: UIImageView!
     @IBOutlet weak var labelPizzaName: UILabel!
     @IBOutlet weak var labelPizzaPrice: UILabel!
+    @IBOutlet var reviewStars: [UIImageView]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func configCell(pizza: ReturnApiPizza) {
+        resetCell()
+        
         let pizzaPrice = NSNumber(value: pizza.priceP)
         let stringFormat = "R$ " + pizzaPrice.valueFormatCurrency()
         self.labelPizzaPrice.text = stringFormat
         self.labelPizzaName.text = "Pizza de " + pizza.name
         self.viewInsideCell.layer.cornerRadius = self.viewInsideCell.frame.height / 10
         self.pizzaImage.layer.cornerRadius = self.pizzaImage.frame.height / 10
+        
+        for (index, star) in reviewStars.enumerated() {
+            if index < pizza.rating {
+                star.tintColor = .systemYellow
+            }
+        }
+    }
+    
+    private func resetCell() {
+        self.labelPizzaPrice.text = ""
+        self.labelPizzaName.text = ""
+        for star in reviewStars {
+            star.tintColor = .gray
+        }
     }
     
 }
