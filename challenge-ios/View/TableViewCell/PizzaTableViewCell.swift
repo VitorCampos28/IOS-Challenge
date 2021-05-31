@@ -2,7 +2,7 @@
 //  PizzaTableViewCell.swift
 //  challenge-ios
 //
-//  Created by Thiago Pontes Lima on 29/05/21.
+//  Created by Vitor Campos on 29/05/21.
 //  Copyright © 2021 Vitor Campos. All rights reserved.
 //
 
@@ -21,7 +21,13 @@ class PizzaTableViewCell: UITableViewCell {
     
     func configCell(pizza: ReturnApiPizza) {
         resetCell()
-        
+        guard let url = URL(string: pizza.imageUrl) else{
+            return
+        }
+        guard let data = try? Data(contentsOf: url) else{
+            return
+        }
+        pizzaImage.image = UIImage(data: data)
         let pizzaPrice = NSNumber(value: pizza.priceP)
         let stringFormat = "R$ " + pizzaPrice.valueFormatCurrency()
         self.labelPizzaPrice.text = stringFormat

@@ -2,7 +2,7 @@
 //  PizzaListViewController.swift
 //  challenge-ios
 //
-//  Created by Thiago Pontes Lima on 29/05/21.
+//  Created by Vitor Campos on 29/05/21.
 //  Copyright © 2021 Vitor Campos. All rights reserved.
 //
 
@@ -19,6 +19,7 @@ class PizzaListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.showSpinner()
         pizzaTableView.delegate = self
         pizzaTableView.dataSource = self
         observablePizzas()
@@ -29,6 +30,7 @@ class PizzaListViewController: UIViewController {
         apiConnection.fetchPizzas().subscribe(onNext: {observer in
             self.pizzas = observer
             self.pizzaTableView.reloadData()
+            self.removeSpinner()
             
         }, onError:  {error in
             // Tratar erro aqui
@@ -57,5 +59,6 @@ extension PizzaListViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pizza = pizzas[indexPath.row]
+        
     }
 }

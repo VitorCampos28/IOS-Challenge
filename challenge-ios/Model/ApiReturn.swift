@@ -2,7 +2,7 @@
 //  ApiReturn.swift
 //  challenge-ios
 //
-//  Created by Thiago Pontes Lima on 28/05/21.
+//  Created by Vitor Campos on 28/05/21.
 //  Copyright © 2021 Vitor Campos. All rights reserved.
 //
 
