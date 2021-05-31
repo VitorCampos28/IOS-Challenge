@@ -38,4 +38,13 @@ extension UIViewController {
         aView?.removeFromSuperview()
         aView = nil
     }
+    
+    //MARK:- funcNextScreen
+    func nextScreen(ViewId: String){
+        guard let storyboard = self.storyboard, let navController = self.navigationController else { return }
+        let pushScreen = storyboard.instantiateViewController(identifier: ViewId)
+        navController.pushViewController(pushScreen, animated: true)
+    }
+    
 }
+

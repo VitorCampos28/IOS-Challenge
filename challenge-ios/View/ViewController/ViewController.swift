@@ -20,14 +20,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loginButton.layer.cornerRadius = 10
     }
-    //MARK:- funcNextScreen
-    func nextScreen(){
-        guard let storyboard = self.storyboard, let navController = self.navigationController else { return }
-        let pizzaViewController = storyboard.instantiateViewController(identifier: "pizzaListViewController")
-        navController.pushViewController(pizzaViewController, animated: true)
-    }
+    
     //MARK:- funcCreatingAlert
     func creatingAlert(){
         let alert = UIAlertController(title: "Login Error", message: "both fields must be filled.", preferredStyle: .alert)
@@ -42,7 +37,7 @@ class ViewController: UIViewController {
         password = passwordTextField.text!
         if (!user.isEmpty && !password.isEmpty){
             apiConnection.login(user: user, passWord: password)
-            nextScreen()
+            self.nextScreen(ViewId: "pizzaListViewController")
         }else{
             creatingAlert()
         }

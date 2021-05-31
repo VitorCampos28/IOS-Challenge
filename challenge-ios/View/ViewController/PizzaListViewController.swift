@@ -16,6 +16,7 @@ class PizzaListViewController: UIViewController {
     var pizzas: [ReturnApiPizza] = []
     let disposeBag = DisposeBag()
     var apiConnection = ApiConnection()
+    var nextScreenPizza: ReturnApiPizza?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class PizzaListViewController: UIViewController {
         pizzaTableView.delegate = self
         pizzaTableView.dataSource = self
         observablePizzas()
+        
     }
     
     //MARK:- observable
@@ -39,10 +41,7 @@ class PizzaListViewController: UIViewController {
     //MARK:- CreatingAlert
     func creatingAlert(){
         let alert = UIAlertController(title: "DataError", message: "Data Error", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
     
@@ -67,7 +66,12 @@ extension PizzaListViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let pizza = pizzas[indexPath.row]
+        nextScreenPizza = pizzas[indexPath.row]
+        guard let storyboard = self.storyboard, let navController = self.navigationController else { return }
+        let pushScreen = storyboard.instantiateViewController(identifier: "viewPizzaSize") as ViewPizzaSize
+        pushScreen.pizzaSelected = nextScreenPizza
+        navController.pushViewController(pushScreen, animated: true)
+
         
     }
 }
