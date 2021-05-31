@@ -20,7 +20,6 @@ class ApiConnection{
         let params = createLoginParams(user: user, pass: passWord)
         _ = AF.request(loginUrl, method: .post,parameters: params).responseJSON{
             data in
-            print(data)
         }
     }
     

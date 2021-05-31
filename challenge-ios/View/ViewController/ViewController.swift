@@ -22,11 +22,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
+    //MARK:- funcNextScreen
     func nextScreen(){
         guard let storyboard = self.storyboard, let navController = self.navigationController else { return }
         let pizzaViewController = storyboard.instantiateViewController(identifier: "pizzaListViewController")
         navController.pushViewController(pizzaViewController, animated: true)
+    }
+    //MARK:- funcCreatingAlert
+    func creatingAlert(){
+        let alert = UIAlertController(title: "Login Error", message: "both fields must be filled.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
     }
     //MARK:- ClickButton
     @IBAction func loginAction(_ sender: Any) {
@@ -36,7 +44,7 @@ class ViewController: UIViewController {
             apiConnection.login(user: user, passWord: password)
             nextScreen()
         }else{
-            print("Credential error")
+            creatingAlert()
         }
     }
     

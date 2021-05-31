@@ -33,10 +33,19 @@ class PizzaListViewController: UIViewController {
             self.removeSpinner()
             
         }, onError:  {error in
-            // Tratar erro aqui
-            // Alert aqui
+            self.creatingAlert()
         }).disposed(by: disposeBag)
     }
+    //MARK:- CreatingAlert
+    func creatingAlert(){
+        let alert = UIAlertController(title: "DataError", message: "Data Error", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
 }
 
 //MARK: - Extension
