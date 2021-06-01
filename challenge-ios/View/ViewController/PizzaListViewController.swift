@@ -27,7 +27,7 @@ class PizzaListViewController: UIViewController {
         
     }
     
-    //MARK:- observable
+    //MARK:- Observable
     func observablePizzas() {
         apiConnection.fetchPizzas().subscribe(onNext: {observer in
             self.pizzas = observer
@@ -57,14 +57,14 @@ extension PizzaListViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pizzas.count
     }
-    
+    //MARK: - Update Cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = pizzaTableView.dequeueReusableCell(withIdentifier: "pizzaCell") as! PizzaTableViewCell
         let pizza = pizzas[indexPath.row]
         cell.configCell(pizza: pizza)
         return cell
     }
-    
+    //MARK: - Click Event Cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         nextScreenPizza = pizzas[indexPath.row]
         guard let storyboard = self.storyboard, let navController = self.navigationController else { return }

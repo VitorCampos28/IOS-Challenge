@@ -13,13 +13,13 @@ class ApiConnection{
     
     let loginUrl = "https://p3teufi0k9.execute-api.us-east-1.amazonaws.com/v1/signin"
     let pizzaUrl = "https://p3teufi0k9.execute-api.us-east-1.amazonaws.com/v1/pizza"
-    //var credential = ["email": "user@xds.com.br", "password": "223344"]
     
     //MARK: - Login
     public func login(user: String, passWord: String){
         let params = createLoginParams(user: user, pass: passWord)
         _ = AF.request(loginUrl, method: .post,parameters: params).responseJSON{
             data in
+            print(data)
         }
     }
     

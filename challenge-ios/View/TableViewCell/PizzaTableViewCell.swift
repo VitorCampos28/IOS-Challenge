@@ -19,7 +19,7 @@ class PizzaTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+    //MARK: - Updating Cell
     func configCell(pizza: ReturnApiPizza) {
         resetCell()
         guard let url = URL(string: pizza.imageUrl) else{
@@ -42,7 +42,7 @@ class PizzaTableViewCell: UITableViewCell {
             }
         }
     }
-    
+    //MARK: - Reset cell
     private func resetCell() {
         self.labelPizzaPrice.text = ""
         self.labelPizzaName.text = ""

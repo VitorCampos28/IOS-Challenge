@@ -39,7 +39,7 @@ extension UIViewController {
         aView = nil
     }
     
-    //MARK:- funcNextScreen
+    //MARK:- Func Next Screen
     func nextScreen(ViewId: String){
         guard let storyboard = self.storyboard, let navController = self.navigationController else { return }
         let pushScreen = storyboard.instantiateViewController(identifier: ViewId)

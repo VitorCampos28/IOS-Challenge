@@ -8,7 +8,6 @@
 
 import Foundation
 //MARK: - ReturnApi
-//struct para moldar os dados vindos da api
 
 struct ReturnApiPizza: Codable {
     let id, name, imageUrl: String
