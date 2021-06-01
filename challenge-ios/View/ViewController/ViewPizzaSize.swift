@@ -61,8 +61,8 @@ class ViewPizzaSize: UIViewController{
         let pizzaPrice = NSNumber(value: pizzaSelected!.priceP)
         let stringFormat = "R$ " + pizzaPrice.valueFormatCurrency()
         self.priceLabel.text = stringFormat
+        
         for (index, stars) in starsRating.enumerated() {
-            print(index,stars)
             if index < pizzaSelected!.rating {
                 stars.tintColor = .systemYellow
             }

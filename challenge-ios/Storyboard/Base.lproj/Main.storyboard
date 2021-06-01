@@ -494,7 +494,11 @@
                         <outlet property="buttonM" destination="YeZ-5c-BS1" id="0Eo-hN-AOn"/>
                         <outlet property="buttonP" destination="U7Y-uM-WlO" id="eAy-QO-p4y"/>
                         <outlet property="priceLabel" destination="kAi-SZ-54V" id="ptc-rB-cC5"/>
-                        <outletCollection property="starsRating" destination="v0e-d2-v91" collectionClass="NSMutableArray" id="cvl-oY-Qyz"/>
+                        <outletCollection property="starsRating" destination="nsD-1T-Uwj" collectionClass="NSMutableArray" id="Qno-Kk-uNQ"/>
+                        <outletCollection property="starsRating" destination="v0e-d2-v91" collectionClass="NSMutableArray" id="0Hi-Nc-gCq"/>
+                        <outletCollection property="starsRating" destination="C9M-Or-8cj" collectionClass="NSMutableArray" id="jtp-md-Pxm"/>
+                        <outletCollection property="starsRating" destination="tGO-8B-hXi" collectionClass="NSMutableArray" id="l7Q-nk-XEQ"/>
+                        <outletCollection property="starsRating" destination="YAL-Rt-C86" collectionClass="NSMutableArray" id="UiE-YF-wk6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaN-Qc-CvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -35,6 +35,7 @@ class PizzaTableViewCell: UITableViewCell {
         self.labelPizzaName.text = "Pizza de " + pizza.name
         self.viewInsideCell.layer.cornerRadius = 10
         self.pizzaImage.layer.cornerRadius = 10
+        
         for (index, star) in reviewStars.enumerated() {
             if index < pizza.rating {
                 star.tintColor = .systemYellow
