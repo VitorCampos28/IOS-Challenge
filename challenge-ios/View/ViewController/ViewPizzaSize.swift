@@ -12,6 +12,7 @@ class ViewPizzaSize: UIViewController{
     @IBOutlet weak var ImagePizza: UIImageView!
     @IBOutlet weak var PizzaName: UILabel!
     @IBOutlet var starsRating: [UIImageView]!
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var buttonP: UIButton!
     @IBOutlet weak var buttonM: UIButton!
     @IBOutlet weak var buttonG: UIButton!
@@ -24,6 +25,7 @@ class ViewPizzaSize: UIViewController{
         buttonP.layer.cornerRadius = 10
         buttonM.layer.cornerRadius = 10
         buttonG.layer.cornerRadius = 10
+        backButton.layer.cornerRadius = 10
     }
     func clickActionButton(buttonClick: Double){
         let pizzaPrice = NSNumber(value: buttonClick)
@@ -32,6 +34,9 @@ class ViewPizzaSize: UIViewController{
     }
     @IBAction func buttonP(_ sender: Any) {
         clickActionButton(buttonClick: pizzaSelected!.priceP)
+    }
+    @IBAction func backToList(_ sender: Any) {
+        self.nextScreen(ViewId: "pizzaListViewController")
     }
     @IBAction func buttonM(_ sender: Any) {
         clickActionButton(buttonClick: pizzaSelected!.priceM)

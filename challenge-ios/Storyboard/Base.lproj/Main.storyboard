@@ -415,14 +415,29 @@
                                             <constraint firstAttribute="width" constant="20" id="yFY-bP-qiu"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2x-xY-EO4">
+                                        <rect key="frame" x="30" y="30" width="40" height="40"/>
+                                        <color key="backgroundColor" red="0.15686274510000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="j3d-s7-2Wr"/>
+                                            <constraint firstAttribute="height" constant="40" id="vyU-Bp-lk1"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="arrowshape.turn.up.left.2.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="backToList:" destination="sTV-aG-hm3" eventType="touchUpInside" id="1qb-oG-fhd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15686274509803921" green="0.17254901960784313" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="nsD-1T-Uwj" firstAttribute="top" secondItem="GxB-GR-p0G" secondAttribute="bottom" constant="8" id="0sk-Ax-oZC"/>
                                     <constraint firstItem="U7Y-uM-WlO" firstAttribute="height" secondItem="HZc-ob-jbv" secondAttribute="height" multiplier="0.06" id="0u5-2z-dD2"/>
                                     <constraint firstItem="YeZ-5c-BS1" firstAttribute="centerY" secondItem="HZc-ob-jbv" secondAttribute="centerY" constant="210" id="2mV-SK-R6E"/>
+                                    <constraint firstItem="a2x-xY-EO4" firstAttribute="leading" secondItem="HZc-ob-jbv" secondAttribute="leading" constant="30" id="3Kb-sW-QxS"/>
                                     <constraint firstItem="gVf-m0-gxW" firstAttribute="height" secondItem="HZc-ob-jbv" secondAttribute="height" multiplier="0.1" id="4eq-AB-32l"/>
                                     <constraint firstItem="tGO-8B-hXi" firstAttribute="top" secondItem="GxB-GR-p0G" secondAttribute="bottom" constant="8" id="8Fy-YN-d2S"/>
+                                    <constraint firstItem="a2x-xY-EO4" firstAttribute="top" secondItem="HZc-ob-jbv" secondAttribute="top" constant="30" id="AB5-8h-OOg"/>
                                     <constraint firstItem="U7Y-uM-WlO" firstAttribute="leading" secondItem="HZc-ob-jbv" secondAttribute="leading" constant="25" id="Aca-ke-TAh"/>
                                     <constraint firstItem="kAi-SZ-54V" firstAttribute="centerY" secondItem="HZc-ob-jbv" secondAttribute="centerY" constant="300" id="CxV-CN-R0f"/>
                                     <constraint firstAttribute="trailing" secondItem="yC5-1n-gKF" secondAttribute="trailing" constant="25" id="EeA-vs-GoQ"/>
@@ -474,6 +489,7 @@
                     <connections>
                         <outlet property="ImagePizza" destination="LXQ-bk-mjC" id="ggV-AF-O2O"/>
                         <outlet property="PizzaName" destination="GxB-GR-p0G" id="UIP-mA-Ry4"/>
+                        <outlet property="backButton" destination="a2x-xY-EO4" id="qR0-Yc-lia"/>
                         <outlet property="buttonG" destination="yC5-1n-gKF" id="Q0k-ND-DgS"/>
                         <outlet property="buttonM" destination="YeZ-5c-BS1" id="0Eo-hN-AOn"/>
                         <outlet property="buttonP" destination="U7Y-uM-WlO" id="eAy-QO-p4y"/>
@@ -554,6 +570,7 @@
     <resources>
         <image name="LogoPizza" width="225" height="225"/>
         <image name="Pizza" width="270" height="186"/>
+        <image name="arrowshape.turn.up.left.2.fill" catalog="system" width="64" height="42"/>
         <image name="checkmark.circle" catalog="system" width="64" height="60"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
