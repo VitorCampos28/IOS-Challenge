@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		210C25362662AFA100F7E2CC /* PizzaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210C25352662AFA100F7E2CC /* PizzaTableViewCell.swift */; };
 		210C253E2662B1FA00F7E2CC /* PizzaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210C253D2662B1FA00F7E2CC /* PizzaListViewController.swift */; };
-		216206422664036B00BCEBBF /* String+currencyFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216206412664036B00BCEBBF /* String+currencyFormater.swift */; };
+		2163548726680C3800D236B0 /* PizzaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163548626680C3800D236B0 /* PizzaDetailViewController.swift */; };
+		2163548926680C3E00D236B0 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163548826680C3E00D236B0 /* ConfirmationViewController.swift */; };
+		2163548B26680C6400D236B0 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163548A26680C6400D236B0 /* Util.swift */; };
 		218A66FF2662C239008E7E91 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 218A66FE2662C239008E7E91 /* RxSwift */; };
 		21ECA6022661BC2A00177993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ECA6012661BC2A00177993 /* AppDelegate.swift */; };
 		21ECA6042661BC2A00177993 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ECA6032661BC2A00177993 /* SceneDelegate.swift */; };
@@ -26,7 +28,9 @@
 /* Begin PBXFileReference section */
 		210C25352662AFA100F7E2CC /* PizzaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaTableViewCell.swift; sourceTree = "<group>"; };
 		210C253D2662B1FA00F7E2CC /* PizzaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaListViewController.swift; sourceTree = "<group>"; };
-		216206412664036B00BCEBBF /* String+currencyFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+currencyFormater.swift"; sourceTree = "<group>"; };
+		2163548626680C3800D236B0 /* PizzaDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaDetailViewController.swift; sourceTree = "<group>"; };
+		2163548826680C3E00D236B0 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		2163548A26680C6400D236B0 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		21ECA5FE2661BC2A00177993 /* challenge-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "challenge-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21ECA6012661BC2A00177993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21ECA6032661BC2A00177993 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				21ECA6052661BC2A00177993 /* ViewController.swift */,
+				2163548626680C3800D236B0 /* PizzaDetailViewController.swift */,
+				2163548826680C3E00D236B0 /* ConfirmationViewController.swift */,
 				210C253D2662B1FA00F7E2CC /* PizzaListViewController.swift */,
 			);
 			path = ViewController;
@@ -106,7 +112,7 @@
 		216206402664034C00BCEBBF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				216206412664036B00BCEBBF /* String+currencyFormater.swift */,
+				2163548A26680C6400D236B0 /* Util.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -224,9 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216206422664036B00BCEBBF /* String+currencyFormater.swift in Sources */,
+				2163548B26680C6400D236B0 /* Util.swift in Sources */,
 				21ECA62B2661D77F00177993 /* ApiConnection.swift in Sources */,
+				2163548726680C3800D236B0 /* PizzaDetailViewController.swift in Sources */,
 				210C253E2662B1FA00F7E2CC /* PizzaListViewController.swift in Sources */,
+				2163548926680C3E00D236B0 /* ConfirmationViewController.swift in Sources */,
 				21ECA6062661BC2A00177993 /* ViewController.swift in Sources */,
 				21ECA6292661D76700177993 /* ApiReturn.swift in Sources */,
 				21ECA6022661BC2A00177993 /* AppDelegate.swift in Sources */,

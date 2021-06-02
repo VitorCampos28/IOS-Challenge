@@ -125,7 +125,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRL-GW-kY7">
                                 <rect key="frame" x="0.0" y="39" width="414" height="818"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kTh-aa-JVJ">
+                                    <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Search Pizza" translatesAutoresizingMaskIntoConstraints="NO" id="kTh-aa-JVJ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
@@ -288,6 +288,7 @@
                     </view>
                     <connections>
                         <outlet property="pizzaTableView" destination="Jac-RW-5LW" id="Ywq-gp-3aq"/>
+                        <outlet property="searchBar" destination="kTh-aa-JVJ" id="gYu-9p-2J3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PyK-BN-evo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

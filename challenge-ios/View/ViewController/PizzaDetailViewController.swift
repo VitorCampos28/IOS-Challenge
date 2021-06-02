@@ -10,7 +10,7 @@ import UIKit
 
 class PizzaDetailViewController: UIViewController{
     
-    //MARK: Outlets
+    //MARK: -Outlets
     @IBOutlet weak var ImagePizza: UIImageView!
     @IBOutlet weak var PizzaName: UILabel!
     @IBOutlet var starsRating: [UIImageView]!
@@ -18,7 +18,7 @@ class PizzaDetailViewController: UIViewController{
     @IBOutlet var sizeButtonList: [UIButton]!
     @IBOutlet weak var priceLabel: UILabel!
     
-    //MARK: Variables
+    //MARK: -Variables
     var pizzaSelected: ReturnApiPizza?
     
     //MARK: - Constants
