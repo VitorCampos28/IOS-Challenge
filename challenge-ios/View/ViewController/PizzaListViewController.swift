@@ -20,13 +20,13 @@ class PizzaListViewController: UIViewController {
     let disposeBag = DisposeBag()
     var apiConnection = ApiConnection()
     var nextScreenPizza: ReturnApiPizza?
-    var searching = false
     
     fileprivate enum Constants {
         static let kDetailViewControllerIdentifier = "PizzaDetailViewController"
         static let kErrorTitle = "DataError"
         static let kErrorMessage = "Data Error"
         static let kButtonOption = "OK"
+        static let kIdCell = "pizzaCell"
     }
     
     override func viewDidLoad() {
@@ -41,8 +41,9 @@ class PizzaListViewController: UIViewController {
     
     //MARK:- Observable
     func observablePizzas() {
-        apiConnection.fetchPizzas().subscribe(onNext: {observer in
-            self.pizzas = observer
+        apiConnection.fetchPizzas().subscribe(onNext: { pizzaList in
+            self.pizzas = pizzaList
+            self.searchPizza = pizzaList
             self.pizzaTableView.reloadData()
             self.removeSpinner()
             
@@ -62,11 +63,11 @@ class PizzaListViewController: UIViewController {
 //MARK: - Extension
 extension PizzaListViewController: UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let searchTextLowerCase = searchText.lowercased()
-        searchPizza = pizzas.filter({$0.name.lowercased().contains(searchTextLowerCase)})
-        searching = true
-        if (searchTextLowerCase.isEmpty){
-            searching = false
+        if (searchText.count > 2 && !searchText.isEmpty){
+            let searchTextLowerCase = searchText.lowercased()
+            searchPizza = pizzas.filter({$0.name.lowercased().contains(searchTextLowerCase)})
+        } else {
+            searchPizza = pizzas
         }
         pizzaTableView.reloadData()
     }
@@ -75,35 +76,25 @@ extension PizzaListViewController: UITableViewDataSource, UITableViewDelegate, U
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searching {
-            return searchPizza.count
-        }else {
-            return pizzas.count
-        }
+        return searchPizza.count
         
     }
     //MARK: - Update Cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = pizzaTableView.dequeueReusableCell(withIdentifier: "pizzaCell") as! PizzaTableViewCell
-        var pizza = pizzas[indexPath.row]
-        if searching {
-            pizza = searchPizza[indexPath.row]
-        }else {
-            pizza = pizzas[indexPath.row]
-        }
+        guard let cell = pizzaTableView.dequeueReusableCell(withIdentifier: Constants.kIdCell) as? PizzaTableViewCell else { return UITableViewCell()}
+        let pizza = searchPizza[indexPath.row]
+       
         cell.configCell(pizza: pizza)
         return cell
     }
     //MARK: - Click Event Cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (searching){
-            nextScreenPizza = searchPizza[indexPath.row]
-        }else {
-            nextScreenPizza = pizzas[indexPath.row]
-        }
+        
+        nextScreenPizza = searchPizza[indexPath.row]
+        
         guard let storyboard = self.storyboard, let navController = self.navigationController else { return }
         // Cria uma instancia da PizzaDetailViewController para acessar a variavel 'pizzaSelected'
-        let pushScreen = storyboard.instantiateViewController(identifier: Constants.kDetailViewControllerIdentifier) as PizzaDetailViewController
+        let pushScreen = storyboard.instantiateViewController(identifier:  Constants.kDetailViewControllerIdentifier) as PizzaDetailViewController
         // passa pra tela de detalhe a pizza selecionada
         pushScreen.pizzaSelected = nextScreenPizza
         // da push na stack da NavigationController

@@ -19,8 +19,6 @@ class ConfirmationViewController: UIViewController {
         /// Utilizar Pop nessa parte
         self.popToViewControllerWithType(type: PizzaListViewController.self)
     }
-    
-    
 
 }
 

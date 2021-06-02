@@ -10,6 +10,10 @@ import Foundation
 import RxSwift
 
 class ApiConnection{
+    fileprivate enum Constants {
+        static let kUsernameKey = "email"
+        static let kPasswordKey = "password"
+    }
     
     let loginUrl = "https://p3teufi0k9.execute-api.us-east-1.amazonaws.com/v1/signin"
     let pizzaUrl = "https://p3teufi0k9.execute-api.us-east-1.amazonaws.com/v1/pizza"
@@ -43,6 +47,6 @@ class ApiConnection{
     
     //MARK: - CreatingLoginParams
     private func createLoginParams(user: String, pass: String) -> [String : String] {
-        return ["email": user, "password": pass]
+        return [ Constants.kUsernameKey: user, Constants.kPasswordKey: pass]
     }
 }

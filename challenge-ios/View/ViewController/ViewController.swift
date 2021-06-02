@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         static let kLoginError = "Login Error"
         static let kErrorLoginMessage = "both fields must be filled."
         static let kViewController = "pizzaListViewController"
+        static let kButtonOK = "OK"
     }
     
     override func viewDidLoad() {
@@ -35,8 +36,7 @@ class ViewController: UIViewController {
     //MARK:- funcCreatingAlert
     func creatingAlert(){
         let alert = UIAlertController(title: Constants.kLoginError, message: Constants.kErrorLoginMessage , preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: Constants.kButtonOK, style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
     }

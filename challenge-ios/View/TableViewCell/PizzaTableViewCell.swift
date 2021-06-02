@@ -50,8 +50,8 @@ class PizzaTableViewCell: UITableViewCell {
     }
     //MARK: - Reset cell
     private func resetCell() {
-        self.labelPizzaPrice.text = ""
-        self.labelPizzaName.text = ""
+        self.labelPizzaPrice.text = String()
+        self.labelPizzaName.text = String()
         for star in reviewStars {
             star.tintColor = .gray
         }

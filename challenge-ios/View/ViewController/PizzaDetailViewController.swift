@@ -29,7 +29,7 @@ class PizzaDetailViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateScreen()
+        setupView()
         configButtonCorner()
     }
     //MARK:- ConfigButtons
@@ -48,6 +48,7 @@ class PizzaDetailViewController: UIViewController{
         button.backgroundColor = backgroundColor
         button.tintColor = backgroundColor
         button.setTitleColor(titleColor, for: .normal)
+        button.setTitleColor(titleColor, for: .selected)
         button.layer.cornerRadius = 10
     }
     
@@ -93,10 +94,11 @@ class PizzaDetailViewController: UIViewController{
     }
     
     
-    //MARK: - PopulateScreen
-    func populateScreen(){
+    //MARK: - SetupView
+    func setupView(){
         resetCell()
         urlToImage()
+        
         guard let pizzaSelected = pizzaSelected else { return }
         PizzaName.text = Constants.kPizzaTitle + pizzaSelected.name
         let pizzaPrice = NSNumber(value: pizzaSelected.priceP)
@@ -122,8 +124,8 @@ class PizzaDetailViewController: UIViewController{
     }
     //MARK: - Reset screen
     private func resetCell() {
-        self.priceLabel.text = ""
-        self.PizzaName.text = ""
+        self.priceLabel.text = String()
+        self.PizzaName.text = String()
         for star in starsRating {
             star.tintColor = .gray
         }
