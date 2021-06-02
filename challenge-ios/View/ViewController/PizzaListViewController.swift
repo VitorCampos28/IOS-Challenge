@@ -18,6 +18,13 @@ class PizzaListViewController: UIViewController {
     var apiConnection = ApiConnection()
     var nextScreenPizza: ReturnApiPizza?
     
+    fileprivate enum Constants {
+        static let kDetailViewControllerIdentifier = "PizzaDetailViewController"
+        static let kErrorTitle = "DataError"
+        static let kErrorMessage = "Data Error"
+        static let kButtonOption = "OK"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.showSpinner()
@@ -40,8 +47,8 @@ class PizzaListViewController: UIViewController {
     }
     //MARK:- CreatingAlert
     func creatingAlert(){
-        let alert = UIAlertController(title: "DataError", message: "Data Error", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        let alert = UIAlertController(title: Constants.kErrorTitle, message: Constants.kErrorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: Constants.kButtonOption, style: .default, handler: nil))
         self.present(alert, animated: true)
     }
     
@@ -68,10 +75,11 @@ extension PizzaListViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         nextScreenPizza = pizzas[indexPath.row]
         guard let storyboard = self.storyboard, let navController = self.navigationController else { return }
-        let pushScreen = storyboard.instantiateViewController(identifier: "viewPizzaSize") as ViewPizzaSize
+        // Cria uma instancia da PizzaDetailViewController para acessar a variavel 'pizzaSelected'
+        let pushScreen = storyboard.instantiateViewController(identifier: Constants.kDetailViewControllerIdentifier) as PizzaDetailViewController
+        // passa pra tela de detalhe a pizza selecionada
         pushScreen.pizzaSelected = nextScreenPizza
+        // da push na stack da NavigationController
         navController.pushViewController(pushScreen, animated: true)
-
-        
     }
 }

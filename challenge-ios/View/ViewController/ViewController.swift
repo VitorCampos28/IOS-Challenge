@@ -10,13 +10,22 @@ import UIKit
 import RxSwift
 
 class ViewController: UIViewController {
+    //MARK: - Outlet
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    //MARK: - Variables
     var apiConnection = ApiConnection()
     var user: String = ""
     var password: String = ""
+    
+    //MARK: -Constants
+    fileprivate enum Constants {
+        static let kLoginError = "Login Error"
+        static let kErrorLoginMessage = "both fields must be filled."
+        static let kViewController = "pizzaListViewController"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +34,7 @@ class ViewController: UIViewController {
     
     //MARK:- funcCreatingAlert
     func creatingAlert(){
-        let alert = UIAlertController(title: "Login Error", message: "both fields must be filled.", preferredStyle: .alert)
+        let alert = UIAlertController(title: Constants.kLoginError, message: Constants.kErrorLoginMessage , preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
@@ -33,11 +42,12 @@ class ViewController: UIViewController {
     }
     //MARK:- ClickButton
     @IBAction func loginAction(_ sender: Any) {
-        user = userTextField.text!
-        password = passwordTextField.text!
+        
+        guard let user = userTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
         if (!user.isEmpty && !password.isEmpty){
             apiConnection.login(user: user, passWord: password)
-            self.nextScreen(ViewId: "pizzaListViewController")
+            self.nextScreen(ViewId: Constants.kViewController )
         }else{
             creatingAlert()
         }

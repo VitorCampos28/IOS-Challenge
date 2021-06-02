@@ -39,6 +39,17 @@ extension UIViewController {
         aView = nil
     }
     
+    //MARK: - POPtoViewController
+    func popToViewControllerWithType<T>(type: T.Type) {
+        guard let pizzaVC = navigationController?.viewControllers else { return }
+        for vc in pizzaVC {
+            // se ela for uma instancia do tipo <T> entao dar pop nela
+            if vc is T {
+                self.navigationController?.popToViewController(vc, animated: true)
+            }
+        }
+    }
+    
     //MARK:- Func Next Screen
     func nextScreen(ViewId: String){
         guard let storyboard = self.storyboard, let navController = self.navigationController else { return }

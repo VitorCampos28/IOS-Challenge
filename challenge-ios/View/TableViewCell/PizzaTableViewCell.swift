@@ -9,12 +9,18 @@
 import UIKit
 
 class PizzaTableViewCell: UITableViewCell {
+    //MARK: - Outlet
     @IBOutlet weak var viewInsideCell: UIView!
     @IBOutlet weak var pizzaImage: UIImageView!
     @IBOutlet weak var labelPizzaName: UILabel!
     @IBOutlet weak var labelPizzaPrice: UILabel!
     @IBOutlet var reviewStars: [UIImageView]!
-
+    
+    //MARK: - Constants
+    fileprivate enum Constants{
+        static let kCurrencyType =  "R$ "
+        static let kPizzaTitle = "Pizza de "
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,9 +36,9 @@ class PizzaTableViewCell: UITableViewCell {
         }
         pizzaImage.image = UIImage(data: data)
         let pizzaPrice = NSNumber(value: pizza.priceP)
-        let stringFormat = "R$ " + pizzaPrice.valueFormatCurrency()
+        let stringFormat = Constants.kCurrencyType + pizzaPrice.valueFormatCurrency()
         self.labelPizzaPrice.text = stringFormat
-        self.labelPizzaName.text = "Pizza de " + pizza.name
+        self.labelPizzaName.text = Constants.kPizzaTitle + pizza.name
         self.viewInsideCell.layer.cornerRadius = 10
         self.pizzaImage.layer.cornerRadius = 10
         

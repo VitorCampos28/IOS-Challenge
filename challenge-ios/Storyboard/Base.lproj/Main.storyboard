@@ -294,10 +294,10 @@
             </objects>
             <point key="canvasLocation" x="866.66666666666674" y="42.857142857142854"/>
         </scene>
-        <!--View Pizza Size-->
+        <!--Pizza Detail View Controller-->
         <scene sceneID="Q4u-1K-tql">
             <objects>
-                <viewController storyboardIdentifier="viewPizzaSize" id="sTV-aG-hm3" customClass="ViewPizzaSize" customModule="challenge_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PizzaDetailViewController" id="sTV-aG-hm3" customClass="PizzaDetailViewController" customModule="challenge_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="51g-eM-bB7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -305,7 +305,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZc-ob-jbv">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pizza" translatesAutoresizingMaskIntoConstraints="NO" id="LXQ-bk-mjC">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pizza" translatesAutoresizingMaskIntoConstraints="NO" id="LXQ-bk-mjC">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxB-GR-p0G">
@@ -328,7 +328,7 @@
                                             <color key="titleColor" red="0.15686274510000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonP:" destination="sTV-aG-hm3" eventType="touchUpInside" id="ws6-1w-H3O"/>
+                                            <action selector="sizeSelected:" destination="sTV-aG-hm3" eventType="touchUpInside" id="EUS-wQ-xDs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeZ-5c-BS1">
@@ -339,7 +339,7 @@
                                             <color key="titleColor" red="0.15686274510000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonM:" destination="sTV-aG-hm3" eventType="touchUpInside" id="kPp-P3-kU3"/>
+                                            <action selector="sizeSelected:" destination="sTV-aG-hm3" eventType="touchUpInside" id="ayk-gY-GiW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC5-1n-gKF">
@@ -350,7 +350,7 @@
                                             <color key="titleColor" red="0.15686274510000001" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonG:" destination="sTV-aG-hm3" eventType="touchUpInside" id="Ckg-hl-GSe"/>
+                                            <action selector="sizeSelected:" destination="sTV-aG-hm3" eventType="touchUpInside" id="xXW-jY-Df7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVf-m0-gxW">
@@ -490,25 +490,25 @@
                         <outlet property="ImagePizza" destination="LXQ-bk-mjC" id="ggV-AF-O2O"/>
                         <outlet property="PizzaName" destination="GxB-GR-p0G" id="UIP-mA-Ry4"/>
                         <outlet property="backButton" destination="a2x-xY-EO4" id="qR0-Yc-lia"/>
-                        <outlet property="buttonG" destination="yC5-1n-gKF" id="Q0k-ND-DgS"/>
-                        <outlet property="buttonM" destination="YeZ-5c-BS1" id="0Eo-hN-AOn"/>
-                        <outlet property="buttonP" destination="U7Y-uM-WlO" id="eAy-QO-p4y"/>
                         <outlet property="priceLabel" destination="kAi-SZ-54V" id="ptc-rB-cC5"/>
                         <outletCollection property="starsRating" destination="nsD-1T-Uwj" collectionClass="NSMutableArray" id="Qno-Kk-uNQ"/>
                         <outletCollection property="starsRating" destination="v0e-d2-v91" collectionClass="NSMutableArray" id="0Hi-Nc-gCq"/>
                         <outletCollection property="starsRating" destination="C9M-Or-8cj" collectionClass="NSMutableArray" id="jtp-md-Pxm"/>
                         <outletCollection property="starsRating" destination="tGO-8B-hXi" collectionClass="NSMutableArray" id="l7Q-nk-XEQ"/>
                         <outletCollection property="starsRating" destination="YAL-Rt-C86" collectionClass="NSMutableArray" id="UiE-YF-wk6"/>
+                        <outletCollection property="sizeButtonList" destination="U7Y-uM-WlO" collectionClass="NSMutableArray" id="Puc-YA-sej"/>
+                        <outletCollection property="sizeButtonList" destination="YeZ-5c-BS1" collectionClass="NSMutableArray" id="COg-lT-LxU"/>
+                        <outletCollection property="sizeButtonList" destination="yC5-1n-gKF" collectionClass="NSMutableArray" id="DRJ-Ti-hJP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaN-Qc-CvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1667" y="43"/>
         </scene>
-        <!--Confirmation Screen-->
+        <!--Confirmation View Controller-->
         <scene sceneID="hti-v7-0gb">
             <objects>
-                <viewController storyboardIdentifier="ConfirmationScreen" id="NiZ-P5-z1R" customClass="ConfirmationScreen" customModule="challenge_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmationViewController" id="NiZ-P5-z1R" customClass="ConfirmationViewController" customModule="challenge_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oBN-2b-bd1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
