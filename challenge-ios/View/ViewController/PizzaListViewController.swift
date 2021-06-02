@@ -65,6 +65,9 @@ extension PizzaListViewController: UITableViewDataSource, UITableViewDelegate, U
         let searchTextLowerCase = searchText.lowercased()
         searchPizza = pizzas.filter({$0.name.lowercased().contains(searchTextLowerCase)})
         searching = true
+        if (searchTextLowerCase.isEmpty){
+            searching = false
+        }
         pizzaTableView.reloadData()
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
