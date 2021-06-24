@@ -15,7 +15,6 @@
 		218A66FF2662C239008E7E91 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 218A66FE2662C239008E7E91 /* RxSwift */; };
 		21ECA6022661BC2A00177993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ECA6012661BC2A00177993 /* AppDelegate.swift */; };
 		21ECA6042661BC2A00177993 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ECA6032661BC2A00177993 /* SceneDelegate.swift */; };
-		21ECA6062661BC2A00177993 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ECA6052661BC2A00177993 /* ViewController.swift */; };
 		21ECA6092661BC2A00177993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21ECA6072661BC2A00177993 /* Main.storyboard */; };
 		21ECA60C2661BC2A00177993 /* challenge_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21ECA60A2661BC2A00177993 /* challenge_ios.xcdatamodeld */; };
 		21ECA60E2661BC2C00177993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21ECA60D2661BC2C00177993 /* Assets.xcassets */; };
@@ -23,6 +22,16 @@
 		21ECA6242661D67600177993 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 21ECA6232661D67600177993 /* Alamofire */; };
 		21ECA6292661D76700177993 /* ReturnApiPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ECA6282661D76700177993 /* ReturnApiPizza.swift */; };
 		21ECA62B2661D77F00177993 /* ApiConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ECA62A2661D77F00177993 /* ApiConnection.swift */; };
+		AD05C6502684B7E4004DA832 /* PizzaDetailXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD05C64E2684B7E4004DA832 /* PizzaDetailXibViewController.swift */; };
+		AD05C6512684B7E4004DA832 /* PizzaDetailXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD05C64F2684B7E4004DA832 /* PizzaDetailXibViewController.xib */; };
+		AD809A602684D76D0022B55B /* ConfirmationXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD809A5E2684D76D0022B55B /* ConfirmationXibViewController.swift */; };
+		AD809A612684D76D0022B55B /* ConfirmationXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD809A5F2684D76D0022B55B /* ConfirmationXibViewController.xib */; };
+		ADB7DFD0268276020030B1BB /* ViewControllerXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB7DFCE268276020030B1BB /* ViewControllerXib.swift */; };
+		ADB7DFD1268276020030B1BB /* ViewControllerXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB7DFCF268276020030B1BB /* ViewControllerXib.xib */; };
+		ADB7DFD42682797C0030B1BB /* PizzaListViewControllerXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB7DFD22682797C0030B1BB /* PizzaListViewControllerXib.swift */; };
+		ADB7DFD52682797C0030B1BB /* PizzaListViewControllerXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADB7DFD32682797C0030B1BB /* PizzaListViewControllerXib.xib */; };
+		ADCFBDD926837D5100FFFAD9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFBDD726837D5100FFFAD9 /* TableViewCell.swift */; };
+		ADCFBDDA26837D5100FFFAD9 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADCFBDD826837D5100FFFAD9 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +43,6 @@
 		21ECA5FE2661BC2A00177993 /* challenge-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "challenge-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21ECA6012661BC2A00177993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21ECA6032661BC2A00177993 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		21ECA6052661BC2A00177993 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21ECA6082661BC2A00177993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21ECA60B2661BC2A00177993 /* challenge_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = challenge_ios.xcdatamodel; sourceTree = "<group>"; };
 		21ECA60D2661BC2C00177993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +50,16 @@
 		21ECA6122661BC2C00177993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21ECA6282661D76700177993 /* ReturnApiPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnApiPizza.swift; sourceTree = "<group>"; };
 		21ECA62A2661D77F00177993 /* ApiConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConnection.swift; sourceTree = "<group>"; };
+		AD05C64E2684B7E4004DA832 /* PizzaDetailXibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDetailXibViewController.swift; sourceTree = "<group>"; };
+		AD05C64F2684B7E4004DA832 /* PizzaDetailXibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PizzaDetailXibViewController.xib; sourceTree = "<group>"; };
+		AD809A5E2684D76D0022B55B /* ConfirmationXibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationXibViewController.swift; sourceTree = "<group>"; };
+		AD809A5F2684D76D0022B55B /* ConfirmationXibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationXibViewController.xib; sourceTree = "<group>"; };
+		ADB7DFCE268276020030B1BB /* ViewControllerXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerXib.swift; sourceTree = "<group>"; };
+		ADB7DFCF268276020030B1BB /* ViewControllerXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerXib.xib; sourceTree = "<group>"; };
+		ADB7DFD22682797C0030B1BB /* PizzaListViewControllerXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaListViewControllerXib.swift; sourceTree = "<group>"; };
+		ADB7DFD32682797C0030B1BB /* PizzaListViewControllerXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PizzaListViewControllerXib.xib; sourceTree = "<group>"; };
+		ADCFBDD726837D5100FFFAD9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		ADCFBDD826837D5100FFFAD9 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +111,17 @@
 		210C253B2662B10600F7E2CC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				21ECA6052661BC2A00177993 /* ViewController.swift */,
 				2163548626680C3800D236B0 /* PizzaDetailViewController.swift */,
 				2163548826680C3E00D236B0 /* ConfirmationViewController.swift */,
 				210C253D2662B1FA00F7E2CC /* PizzaListViewController.swift */,
+				ADB7DFCE268276020030B1BB /* ViewControllerXib.swift */,
+				ADB7DFCF268276020030B1BB /* ViewControllerXib.xib */,
+				ADB7DFD22682797C0030B1BB /* PizzaListViewControllerXib.swift */,
+				ADB7DFD32682797C0030B1BB /* PizzaListViewControllerXib.xib */,
+				AD05C64E2684B7E4004DA832 /* PizzaDetailXibViewController.swift */,
+				AD05C64F2684B7E4004DA832 /* PizzaDetailXibViewController.xib */,
+				AD809A5E2684D76D0022B55B /* ConfirmationXibViewController.swift */,
+				AD809A5F2684D76D0022B55B /* ConfirmationXibViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -105,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				210C25352662AFA100F7E2CC /* PizzaTableViewCell.swift */,
+				ADCFBDD726837D5100FFFAD9 /* TableViewCell.swift */,
+				ADCFBDD826837D5100FFFAD9 /* TableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -217,9 +244,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB7DFD52682797C0030B1BB /* PizzaListViewControllerXib.xib in Resources */,
+				ADCFBDDA26837D5100FFFAD9 /* TableViewCell.xib in Resources */,
+				ADB7DFD1268276020030B1BB /* ViewControllerXib.xib in Resources */,
 				21ECA6112661BC2C00177993 /* LaunchScreen.storyboard in Resources */,
+				AD05C6512684B7E4004DA832 /* PizzaDetailXibViewController.xib in Resources */,
 				21ECA60E2661BC2C00177993 /* Assets.xcassets in Resources */,
 				21ECA6092661BC2A00177993 /* Main.storyboard in Resources */,
+				AD809A612684D76D0022B55B /* ConfirmationXibViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,12 +262,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD05C6502684B7E4004DA832 /* PizzaDetailXibViewController.swift in Sources */,
+				AD809A602684D76D0022B55B /* ConfirmationXibViewController.swift in Sources */,
+				ADCFBDD926837D5100FFFAD9 /* TableViewCell.swift in Sources */,
+				ADB7DFD42682797C0030B1BB /* PizzaListViewControllerXib.swift in Sources */,
+				ADB7DFD0268276020030B1BB /* ViewControllerXib.swift in Sources */,
 				2163548B26680C6400D236B0 /* Util.swift in Sources */,
 				21ECA62B2661D77F00177993 /* ApiConnection.swift in Sources */,
 				2163548726680C3800D236B0 /* PizzaDetailViewController.swift in Sources */,
 				210C253E2662B1FA00F7E2CC /* PizzaListViewController.swift in Sources */,
 				2163548926680C3E00D236B0 /* ConfirmationViewController.swift in Sources */,
-				21ECA6062661BC2A00177993 /* ViewController.swift in Sources */,
 				21ECA6292661D76700177993 /* ReturnApiPizza.swift in Sources */,
 				21ECA6022661BC2A00177993 /* AppDelegate.swift in Sources */,
 				21ECA6042661BC2A00177993 /* SceneDelegate.swift in Sources */,

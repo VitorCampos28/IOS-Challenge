@@ -1,14 +1,14 @@
 //
-//  ConfirmationViewController.swift
+//  ConfirmationXibViewController.swift
 //  challenge-ios
 //
-//  Created by Vitor Campos on 31/05/21.
+//  Created by Vitor Natal on 24/06/21.
 //  Copyright © 2021 Vitor Campos. All rights reserved.
 //
 
 import UIKit
 
-class ConfirmationViewController: UIViewController {
+class ConfirmationXibViewController: UIViewController {
     @IBOutlet weak var voltarButton: UIButton!
     override func viewDidLoad() {
         voltarButton.layer.cornerRadius = 10
@@ -17,9 +17,7 @@ class ConfirmationViewController: UIViewController {
     
     @IBAction func clickVoltarButton(_ sender: Any) {
         /// Utilizar Pop nessa parte
-        self.popToViewControllerWithType(type: PizzaListViewController.self)
+        self.popToViewControllerWithType(type: PizzaListViewControllerXib.self)
     }
 
 }
-
-

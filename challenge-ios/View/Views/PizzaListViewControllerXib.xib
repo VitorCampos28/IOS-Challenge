@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PizzaListViewControllerXib" customModule="challenge_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="pizzaTableView" destination="WEu-mP-Yrp" id="cyb-sq-WaQ"/>
+                <outlet property="searchBar" destination="bUm-Xr-Slt" id="jPV-m3-qdU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6E-eH-OJf">
+                    <rect key="frame" x="0.0" y="39" width="414" height="818"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Search Pizza" translatesAutoresizingMaskIntoConstraints="NO" id="bUm-Xr-Slt">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha seu sabor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHX-2d-KLS">
+                            <rect key="frame" x="10" y="71" width="195" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WEu-mP-Yrp">
+                            <rect key="frame" x="10" y="121" width="393.5" height="654.5"/>
+                            <color key="backgroundColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="sectionIndexBackgroundColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="WEu-mP-Yrp" firstAttribute="width" secondItem="m6E-eH-OJf" secondAttribute="width" multiplier="0.95" id="Hhq-5v-Bgz"/>
+                        <constraint firstItem="WEu-mP-Yrp" firstAttribute="leading" secondItem="m6E-eH-OJf" secondAttribute="leading" constant="10" id="IM3-H2-LlT"/>
+                        <constraint firstItem="bUm-Xr-Slt" firstAttribute="leading" secondItem="m6E-eH-OJf" secondAttribute="leading" id="Mc1-p6-Hag"/>
+                        <constraint firstItem="bUm-Xr-Slt" firstAttribute="top" secondItem="m6E-eH-OJf" secondAttribute="top" id="O5h-2l-tuM"/>
+                        <constraint firstItem="bUm-Xr-Slt" firstAttribute="width" secondItem="m6E-eH-OJf" secondAttribute="width" id="OJD-g6-miq"/>
+                        <constraint firstItem="WEu-mP-Yrp" firstAttribute="height" secondItem="m6E-eH-OJf" secondAttribute="height" multiplier="0.8" id="gLZ-nh-vq1"/>
+                        <constraint firstItem="gHX-2d-KLS" firstAttribute="top" secondItem="bUm-Xr-Slt" secondAttribute="bottom" constant="20" id="lgU-jo-CZk"/>
+                        <constraint firstItem="WEu-mP-Yrp" firstAttribute="top" secondItem="gHX-2d-KLS" secondAttribute="bottom" constant="20" id="sME-GR-xwR"/>
+                        <constraint firstItem="gHX-2d-KLS" firstAttribute="leading" secondItem="m6E-eH-OJf" secondAttribute="leading" constant="10" id="wKd-uI-6XJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="m6E-eH-OJf" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="6DL-BX-ZhC"/>
+                <constraint firstItem="m6E-eH-OJf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Cja-8a-cOG"/>
+                <constraint firstItem="m6E-eH-OJf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jeK-25-HUL"/>
+                <constraint firstItem="m6E-eH-OJf" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" id="u2y-PG-yah"/>
+            </constraints>
+            <point key="canvasLocation" x="97" y="68"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

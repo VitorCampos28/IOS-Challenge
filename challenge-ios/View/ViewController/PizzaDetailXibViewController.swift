@@ -1,15 +1,14 @@
 //
-//  PizzaDetailViewController.swift
+//  PizzaDetailXibViewController.swift
 //  challenge-ios
 //
-//  Created by Vitor Campos on 31/05/21.
+//  Created by Vitor Natal on 24/06/21.
 //  Copyright © 2021 Vitor Campos. All rights reserved.
 //
 
 import UIKit
 
-class PizzaDetailViewController: UIViewController{
-    
+class PizzaDetailXibViewController: UIViewController {
     //MARK: -Outlets
     @IBOutlet weak var ImagePizza: UIImageView!
     @IBOutlet weak var PizzaName: UILabel!
@@ -27,6 +26,16 @@ class PizzaDetailViewController: UIViewController{
         static let kCurrencyType =  "R$ "
         static let kPizzaTitle = "Pizza de "
     }
+    init(pizzaSelected: ReturnApiPizza?) {
+        self.pizzaSelected = pizzaSelected
+        super.init(nibName: "PizzaDetailXibViewController", bundle: nil)
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -90,7 +99,7 @@ class PizzaDetailViewController: UIViewController{
     }
     
     @IBAction func buttonComprar(_ sender: Any) {
-        self.nextScreen(ViewId: Constants.kViewController )
+        self.navigationController?.pushViewController(ConfirmationXibViewController(nibName: "ConfirmationXibViewController", bundle: nil), animated: true)
     }
     
     
@@ -130,4 +139,5 @@ class PizzaDetailViewController: UIViewController{
             star.tintColor = .gray
         }
     }
+
 }

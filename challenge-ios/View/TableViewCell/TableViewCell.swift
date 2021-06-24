@@ -1,14 +1,14 @@
 //
-//  PizzaTableViewCell.swift
+//  TableViewCell.swift
 //  challenge-ios
 //
-//  Created by Vitor Campos on 29/05/21.
+//  Created by Vitor Natal on 23/06/21.
 //  Copyright © 2021 Vitor Campos. All rights reserved.
 //
 
 import UIKit
 
-class PizzaTableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
     //MARK: - Outlet
     @IBOutlet weak var viewInsideCell: UIView!
     @IBOutlet weak var pizzaImage: UIImageView!
@@ -25,6 +25,13 @@ class PizzaTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        // Configure the view for the selected state
+    }
+    
     //MARK: - Updating Cell
     func configCell(pizza: ReturnApiPizza) {
         resetCell()
@@ -56,5 +63,5 @@ class PizzaTableViewCell: UITableViewCell {
             star.tintColor = .gray
         }
     }
-    
+
 }

@@ -1,15 +1,14 @@
 //
-//  ViewController.swift
+//  ViewControllerXib.swift
 //  challenge-ios
 //
-//  Created by Vitor Campos on 28/05/21.
+//  Created by Vitor Natal on 22/06/21.
 //  Copyright © 2021 Vitor Campos. All rights reserved.
 //
 
 import UIKit
-import RxSwift
 
-class ViewController: UIViewController {
+class ViewControllerXib: UIViewController {
     //MARK: - Outlet
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var userTextField: UITextField!
@@ -31,6 +30,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 10
+        
     }
     
     //MARK:- funcCreatingAlert
@@ -47,11 +47,11 @@ class ViewController: UIViewController {
         guard let password = passwordTextField.text else { return }
         if (!user.isEmpty && !password.isEmpty){
             apiConnection.login(user: user, passWord: password)
-            self.nextScreen(ViewId: Constants.kViewController )
+            self.navigationController?.pushViewController(PizzaListViewControllerXib(nibName: "PizzaListViewControllerXib", bundle: nil), animated: true)
         }else{
             creatingAlert()
         }
     }
     
-}
 
+}
