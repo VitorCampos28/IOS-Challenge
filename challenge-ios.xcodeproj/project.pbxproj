@@ -111,17 +111,14 @@
 		210C253B2662B10600F7E2CC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				ADDCBF3526850A8A0000A613 /* Views */,
 				2163548626680C3800D236B0 /* PizzaDetailViewController.swift */,
 				2163548826680C3E00D236B0 /* ConfirmationViewController.swift */,
 				210C253D2662B1FA00F7E2CC /* PizzaListViewController.swift */,
 				ADB7DFCE268276020030B1BB /* ViewControllerXib.swift */,
-				ADB7DFCF268276020030B1BB /* ViewControllerXib.xib */,
 				ADB7DFD22682797C0030B1BB /* PizzaListViewControllerXib.swift */,
-				ADB7DFD32682797C0030B1BB /* PizzaListViewControllerXib.xib */,
 				AD05C64E2684B7E4004DA832 /* PizzaDetailXibViewController.swift */,
-				AD05C64F2684B7E4004DA832 /* PizzaDetailXibViewController.xib */,
 				AD809A5E2684D76D0022B55B /* ConfirmationXibViewController.swift */,
-				AD809A5F2684D76D0022B55B /* ConfirmationXibViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -176,6 +173,17 @@
 				21ECA60A2661BC2A00177993 /* challenge_ios.xcdatamodeld */,
 			);
 			path = "challenge-ios";
+			sourceTree = "<group>";
+		};
+		ADDCBF3526850A8A0000A613 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD809A5F2684D76D0022B55B /* ConfirmationXibViewController.xib */,
+				ADB7DFCF268276020030B1BB /* ViewControllerXib.xib */,
+				AD05C64F2684B7E4004DA832 /* PizzaDetailXibViewController.xib */,
+				ADB7DFD32682797C0030B1BB /* PizzaListViewControllerXib.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
